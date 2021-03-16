@@ -24,7 +24,7 @@
   
   body{
     background-image: url(neon-background--wallpaper.jpg);
-    background-size: 1380px 780px;
+    background-size: cover;
     background-attachment: fixed
   }
   @keyframes temp{
