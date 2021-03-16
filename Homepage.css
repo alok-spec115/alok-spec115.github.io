@@ -1,0 +1,52 @@
+.template{
+    background-color: rgb(31, 162, 223);
+    padding: 2%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px  rgb(31, 162, 223)
+  }
+  .a, .b, .c, .d{
+    color: green;
+    padding: 7px;
+    font-weight: bolder;
+  }
+  
+  .a{
+    background-color: white;
+    border: 1px solid white;
+    width: 40px;
+  }
+  .b, .c, .d{
+    background-color: white;
+    border: 1px solid white;
+    width: 40px;
+    margin-left: 300px
+  }
+  
+  body{
+    background-image: url(neon-background--wallpaper.jpg);
+    background-size: 1380px 780px;
+    background-attachment: fixed
+  }
+  @keyframes temp{
+    from{background-color: #white; color: green}
+    to{background-color: #ff11ff; color: white}
+  }
+  span:hover{
+    animation-name: temp;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 0px 50px purple
+  }
+*{
+    text-decoration: none; 
+}
+h1{
+  color: white;
+  font-family: monotype corsiva;
+  font-size: xxx-large;
+  text-decoration: underline;
+  margin: 50px;
+  margin-left: 34%;
+  text-shadow: 0px 0px 30px white
+}
