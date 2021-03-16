@@ -8,7 +8,9 @@
   body{
     background-image: url(neon-background--wallpaper.jpg);
     background-size: 720px 1160px;
-    background-attachment: fixed
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%
   }
   span{
     background-color: white;
