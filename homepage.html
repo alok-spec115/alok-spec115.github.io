@@ -2,15 +2,13 @@
 <html lang="en">
     <head>
         <style type="text/css">
-            #li{
-                transition: all 0.3s linear 0.1s
-            }
-            #h1{
-                transition: all 0.2s linear 0.2s
-            }
+        .outer-box, .inner-box, .neon, .flex-container > div{
+            transition: opacity 0.2s linear 0.3s, box-shadow 0.2s linear 0.3s,
+            background-color 0.2s linear 0.3s
+        }
         </style>
         <link href="homepage.css" rel="stylesheet" type="text/css">
-        <link href="Shiva-Wallpaper-Golden-Morning.jpg" rel="icon">
+        <link href="game.jpg" rel="icon">
         <title>Homepage</title>
         <meta charset="utf-8">
         <meta name="author" content="Alok">
@@ -20,24 +18,21 @@
     </head>
 <body>
     <header>
-        <!--template-->
-        <div class="template">
-            <ul>
-                <li id="li"><a href="#">Home</a></li>
-                <li id="li"><a href="#" target="_blank">About-us</a></li>
-                <li id="li"><a href="Web-pages.html" target="_blank">Webpages</a></li>
-                <li id="li"><a href="#" target="_blank">Gallery</a></li>
-            </ul>
+        <div class="neon">
+            Neon webpage
         </div>
-        <h1 id="h1">Neon Webpage</h1>
+        <div class="flex-container">
+            <div><a href="#">Home</a></div>
+            <div><a href="Web-pages.html" target="_blank">Webpages</a></div>
+            <div><a href="#" target="_blank">Contact us</a></div>
+            <div><a href="#" target="_blank">Gallery</a></div>
+        </div>
     </header>
-        <center>
-        <div class="image">
-        </div></center>
-        <div class="content">
-                Welcome to the Neon !
-        </div>
-       
-        
+    <main>
+        <div class="outer-box"></div>
+        <div class="inner-box">
+            Welcome to Neon Webpage
+        </div>s
+    </main>
 </body>
 </html>
