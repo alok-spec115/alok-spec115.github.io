@@ -4,69 +4,62 @@
     box-sizing: border-box;
 }
 
-#li{
-    display: inline;
-    float: right;
-    padding: 10px;
-    margin-left: 1%;
-    font-size: large;
-    border: 3px solid greenyellow;
-    
-}
-#li:hover{
-    background-color: #ff11ff;
-    color: white;
-    opacity: 0.5;
-    box-shadow: 10px 10px 10px greenyellow
-}
-
 body{
     background-image: url(neon-mask-4k-yh.jpg);
     background-position: center;
-    height: 100vh;
     background-size: cover;
-    background-attachment: fixed
+    background-attachment: fixed;
+    margin: 2%
 }
 
-#h1{
-    position: sticky;
-    top: 3%;
-    border: 3px solid white;
-    max-width: 25%;
-    padding: 1%;
-    font-family: monotype corsiva;
-    text-decoration: underline;
-}
-#h1:hover{
-   box-shadow: 0px 0px 50px white;
-   opacity: 0.5
+.flex-container{
+    display: flex;
+    justify-content: flex-end;
+    
 }
 
-.image{
-    background-image: url(235804.jpg);
-    background-position: center;
-    height: 70vh;;
-    width: 60%;
+.flex-container > div{
+    padding: 0.5rem;
+    border: 0.2rem solid lightgreen;
+    margin: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.neon{
+    float: left;
+    font-size: 1.5rem;
+    border: 0.2rem solid white;
+    padding: 0.5rem
+}
+
+.outer-box{
+    height: 77vh;
+    width: 60vw;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black url(235804.jpg) no-repeat center ;
     background-size: cover;
-    filter: blur(1.5px);
-    opacity: 0.85;
-    transition: box-shadow 0.2s linear 0.2s
-}
-.image:hover{
-    box-shadow: 0px 0px 100px white;
+    filter: blur(1px) opacity(0.7)
 }
 
-.content{
+.inner-box{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid white;
-    padding: 5%;
-    background-color: rgba(0, 0, 0, 0.4);
-    font-size: 1.2rem;
-    transition: box-shadow 0.2s linear 0.2s
+    border: 0.3rem solid white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2.3rem
 }
-.content:hover{
-    box-shadow: 0px 0px 50px white
+.flex-container > div:hover{
+    opacity: 0.5;
+    background-color: #ff11ff;
+    box-shadow: 0.5rem 0.5rem 0.5rem lightgreen
+}
+
+.neon:hover, .inner-box:hover, .outer-box:hover{
+    box-shadow: 0rem 0rem 3rem white
 }
