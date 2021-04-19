@@ -29,7 +29,8 @@ body{
     float: left;
     font-size: 1.5rem;
     border: 0.2rem solid white;
-    padding: 0.5rem
+    padding: 0.5rem;
+    font-family: monotype corsiva
 }
 
 .outer-box{
