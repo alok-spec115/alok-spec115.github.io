@@ -64,3 +64,19 @@ body{
 .neon:hover, .inner-box:hover, .outer-box:hover{
     box-shadow: 0rem 0rem 3rem white
 }
+@media (max-width: 560px) {
+    .neon{
+        float: none;
+        text-align: center
+    }
+    .flex-container{
+        justify-content: center;
+        ;
+    }
+    .outer-box{
+        position: relative;
+        top: 21rem;
+        height: 60vh
+    
+    }
+}
