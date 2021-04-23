@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    color: white;
+    box-sizing: border-box;
+}
+.image{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(lake.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.white{
+    background: white
+}
+ul{
+    list-style-type: none;
+    position: relative;
+    top: 0.5rem;
+    right: 1.7rem;
+    overflow: hidden;
+}
+
+li a{
+    display: block;
+    float: left;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    text-decoration: none;
+    border-right: 0.1rem solid white
+}
+li a:hover:not(.active){
+    background: white;
+    color: dodgerblue
+}
+.active{
+    background: #4CAF50
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    border: 0.3rem solid white;
+    height: 70vh;
+    width: 35vw;
+    border-radius: 50px 0px 50px 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    overflow: hidden
+}
+
+hr{
+    position: relative;
+    top: 1rem;
+    width: 100vw;
+    border: 0.2rem groove dodgerblue 
+}
+
+@media all and (max-width: 800px) {
+    .box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 65vh;
+        width: 65vw
+    }
+}
+.first, .second{
+    border: none;
+    box-shadow: none;
+    color: black;
+}
+.first, .second, label{
+    position: relative;
+    top: 10rem;
+    width: 70%;
+    line-height: 1rem;
+
+
+}
+
+input[type="submit"], input[type="reset"]{
+    position: relative;
+    top: 10rem;
+    color: black;
+    padding: 1rem;
+    width: 7rem
+}
+h1{
+    position: relative;
+    top: 1rem
+}
+@media all and (min-height: 900px){
+    input[type="submit"], input[type="reset"]{
+        margin-top: 50%
+        }
+} 
