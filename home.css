@@ -58,16 +58,7 @@ hr{
     border: 0.2rem groove dodgerblue 
 }
 
-@media all and (max-width: 800px) {
-    .box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 65vh;
-        width: 65vw
-    }
-}
+
 .first, .second{
     border: none;
     box-shadow: none;
@@ -81,10 +72,23 @@ hr{
 
 
 }
+input[type="submit"]{
+    position: absolute;
+    bottom: 0%;
+    left: 35%;
+    transform: translate(-50%, -50%)
+}
+
+input[type="reset"]{
+    position: absolute;
+    bottom: 0%;
+    left: 65%;
+    transform: translate(-50%, -50%)
+}
 
 input[type="submit"], input[type="reset"]{
-    position: relative;
-    top: 10rem;
+    position: absolute;
+    bottom: 5px;
     color: black;
     padding: 1rem;
     width: 7rem
@@ -95,6 +99,27 @@ h1{
 }
 @media all and (min-height: 900px){
     input[type="submit"], input[type="reset"]{
-        margin-top: 50%
-        }
+        position: absolute;
+        bottom: 5px
+    }
 } 
+@media all and (max-width: 800px) {
+    .box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 65vh;
+        width: 65vw
+    }
+    input[type="submit"]{
+        position: absolute;
+        left: 30%
+    }
+}
+@media all and (max-width: 500px){
+    input[type="reset"]{
+        position: absolute;
+        left: 70%
+    }
+}
