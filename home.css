@@ -169,3 +169,8 @@ h1{
         display: none
     }
 }
+@media (max-height: 707px) and (max-width: 275px){
+    .box{
+        margin-top: 10%;
+    }
+}
