@@ -1,0 +1,149 @@
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white
+}
+
+.grid-container{
+  display: grid;
+  grid-template-rows: auto  auto 85vh auto;
+  overflow: hidden;
+  max-width: 2222px
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background: url(mountain.jpg) no-repeat fixed center;
+  background-size: cover;
+  height: 100vh;
+  max-width: 2222px
+
+}
+.flex-container{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+.flex-container > div{
+  margin: 0.625rem;
+  padding: 0.625rem;
+  border: 0.15rem solid white;
+  font-size: 95%;
+  transition: box-shadow 0.2s linear 0.1s, opacity 0.2s linear 0.1s,
+  border-radius 0.2s linear 0.1s;
+  border-radius: 10px;
+  max-width: 2222px
+}
+.flex-container > div:hover:not(.logo){
+  box-shadow: 0.625rem 0.625rem 0.2rem rgb(98, 233, 98);
+  opacity: 0.5;
+  border-radius: 1rem
+}
+
+hr{
+  border: 0.19rem groove dodgerblue;
+  max-width: 2222px
+}
+form{
+  margin: 1rem
+}
+
+input[type="text"], input[type="password"]{
+  display: block;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  margin: 2rem;
+  width: 45vw;
+  max-width: 400px;
+  font-size: 95%;
+}
+input{
+  color: black
+}
+input[type="submit"], input[type="reset"]{
+  padding: 0.625rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none
+}
+.login-box{
+  border: 0.4rem inset lightblue;
+  text-align: center;
+  border-radius: 30px 0px 30px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  max-width: 500px
+}
+/*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
+.image{
+  background: black url(python.jpg) center;
+  background-size: cover;
+  height: 70vh;
+  width: 60vw;
+  border: 0.3em solid white;
+  position: relative;
+  top: 10%;
+  left: 3%;
+  border-radius: 50px;
+  max-width: 1000px
+}
+form h1{
+  font-size: 40px;
+}
+
+@media all and (min-width: 701px){
+  .login-box{
+    position: absolute;
+    left: 83%;
+    top: 55%
+  }
+  input[type="text"], input[type="password"]{
+    width: 20vw
+  }
+}
+@media all and (max-width: 700px){
+  .image{
+    display: none
+  }
+  input[type="submit"], input[type="reset"]{
+    margin-left: 10%
+  }
+  
+}
+@media all and (max-width: 817px){
+  input[type="submit"], input[type="reset"]{
+    display: block;
+  }
+  input[type="reset"]{
+    margin: 10%
+  }
+}
+@media all and (min-width: 2222px){
+  .login-box{
+    position: fixed;
+    top: 55%;
+    left: 1950px
+  }
+}
+/*
+@media all and (min-width: 700px){
+  .flex-container::before{
+
+  }
+}*/
+@media all and (max-width: 550px){
+  .login-box{
+    margin-top: 10%;
+  }
+}
+@media all and (max-width: 321px){
+  .login-box{
+    margin-top: 27%
+  }
+}
