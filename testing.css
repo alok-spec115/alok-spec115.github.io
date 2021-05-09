@@ -139,11 +139,11 @@ form h1{
 }*/
 @media all and (max-width: 550px){
   .login-box{
-    margin-top: 10%;
+    margin: 10%;
   }
 }
 @media all and (max-width: 321px){
   .login-box{
-    margin-top: 27%
+    margin: 27%
   }
 }
