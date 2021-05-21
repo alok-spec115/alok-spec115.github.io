@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white
+}
+body{
+    margin: 0px;
+    padding: 0px
+}
+.head{grid-area: head}
+.image{grid-area: image}
+.login-box{grid-area: login}
+.foot{grid-area: foot}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'head head head head head head'
+    'image image image . login login'
+    'foot foot foot foot foot foot';
+    grid-template-rows: auto auto auto;
+    background: dodgerblue no-repeat fixed center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(lake.jpg);
+    background-size: cover;
+    height: 100vh;
+    max-width: 2222px;
+    overflow-y: scroll;
+    align-content: space-between;
+
+}
+
+.flex-container{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap
+}
+
+.item{
+    margin: 10px 15px 10px 0px;
+    border: 3px solid white;
+    padding: 10px;
+    font-size: 100%;
+    border-radius: 15px;
+    transition: opacity 0.2s linear 0.1s, box-shadow 0.2s linear 0.1s 
+}
+
+.item:hover{
+    opacity: 0.6;
+    box-shadow: 10px 10px 7px rgb(45, 238, 45)
+}
+
+hr{
+    max-width: 2222px;
+    border: 3px groove dodgerblue
+}
+.login-box, .image{
+    border: 3px solid white;
+    text-align: center;
+    margin: 50px;
+    max-width: 600px;
+    max-height: 900px;
+    padding: 1rem;
+    border-radius: 50px
+}
+input{
+    color: black
+}
+[type="text"], [type="password"], [type="submit"], [type="reset"]{
+    padding: 15px;
+    margin: 17px;
+    border-radius: 10px;
+    border: none;
+    outline: none
+}
+.image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(scenery.jpg);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    height: 67vh;
+}
+@media all and (max-width: 900px){
+    .container{
+        grid-template-areas:
+        'head head head head head'
+        'login login login login login'
+        'image image image image image'
+        'foot foot foot foot foot';
+        grid-template-rows: auto auto auto;
+    }
+}
+@media all and (max-width: 1024px) and (min-width: 901px){
+    .container{
+        grid-template-areas:
+        'head head head head head'
+        '. login login login .'
+        '. image image image .'
+        'foot foot foot foot foot';
+        grid-template-rows: auto auto auto;
+    }
+}
