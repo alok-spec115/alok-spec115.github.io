@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  .head{grid-area: head}
+  .image{grid-area: image}
+  .main{grid-area: main}
+  .foot{grid-area: foot}
+  .one{grid-area: one}
+  .two{grid-area: two}
+  .three{grid-area: three}
+  .four{grid-area: four}
+  .five{grid-area: five}
+  .six{grid-area: six}
+
+  .main{
+    display: grid;
+    grid-template-areas: 
+    '. one two three'
+    '. four five six';
+
+  }
+  
+  
+  .grid-container{
+    display: grid;
+    grid-template-areas:
+    'head head head'
+    'image image image'
+    'main main main'
+    'main main main'
+    'foot foot foot';
+    text-align: center;
+    grid-template-rows: auto 70vh 15vh 15vh;
+  }
+  .field{
+     font-size: large;
+     padding: 5px;
+  }
+  .main{
+    position: relative;
+    bottom: 150px;
+    margin: 20px
+  }
+  .image1, .image2, .image3{
+    background: white url(computer.jpg) center;
+    background-size: cover;
+    height: 170px
+  }
+  
+  /*Image field*/
+  .image{
+    background: white url(image.jpg) center;
+    background-size: cover;
+  }
+  /*end-------------------*/
+  
+  
+  /*media queries*/
+  @media all and  (max-width: 800px) {
+    .main{
+      grid-template-areas: 
+      '. . one .'
+      '. . two .'
+      '. . three .'
+      '. . four .'
+      '. . five .'
+      '. . six .'
+      ;
+    }
+  }
+  
+  
+  /*end-------------------*/
