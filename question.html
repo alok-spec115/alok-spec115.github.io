@@ -38,7 +38,7 @@ elif l == 3:
         print(word1[num[0]].capitalize() + ' hundred ' + word10[num[1]])
     elif num[-1] != '0' and int(num[1:]) > 19:
         print(word1[num[0]].capitalize() + ' hundred ' + word10[num[1]] + ' ' + word1[num[2]])
-    elif 10 < int(num) < 20:
+    elif 10 < int(num[1:]) < 20:
         print(word1[num[0]].capitalize() + ' hundred ' + word11[num[1:]])
     elif num[-1] == '0' and num[1] == '0':
         print(word1[num[0]].capitalize() + ' hundred ')
