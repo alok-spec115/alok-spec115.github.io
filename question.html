@@ -10,7 +10,7 @@
  <H1>NUMBER TO WORD</h1>
      <textarea id="w3review" name="w3review" rows="4" cols="50">
 for x in range(1000):
-    num = input("Enter a number: ")
+    num = str(x)# input("Enter a number: ")
     l = len(num)
 
     word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
@@ -30,7 +30,7 @@ for x in range(1000):
         if num[-1] == '0':
             print(word10[num[0]])
         elif num[-1] != '0' and int(num) > 19:
-            print(word10[num[0]]) + ' ' + word1[num[1]])
+            print(word10[num[0]] + ' ' + word1[num[1]])
         elif 10 < int(num) < 20:
             print(word11[num])
 
@@ -45,6 +45,8 @@ for x in range(1000):
             print(word1[num[0]] + ' Hundred ')
         elif num[1] == '0' and num[-1] != '0':
             print(word1[num[0]] + ' Hundred ' + word1[num[2]])
+
+
 
 
     </textarea>
