@@ -7,7 +7,92 @@
 </head>
 <body>
   
- <marquee> <H1>WILL YOU GO TOMORROW?</h1>
+ <marquee> <H1>NUMBER TO WORD</h1>
+     <textarea id="w3review" name="w3review" rows="4" cols="50">
+        num = input("Enter a number: ")
+        l = len(num)
+
+        word10 = {'1': 'ten', '2': 'twenty', '3': 'thirty', '4': 'forty', '5': 'fifty',
+                  '6': 'sixty', '7': 'seventy', '8': 'eighty', '9': 'ninety'}
+        word1 = {'1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five',
+                 '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine'}
+        word11 = {'11': 'eleven', '12': 'twelve', '13': 'thirteen', '14': 'fourteen', '15': 'fifteen',
+                  '16': 'sixteen', '17': 'seventeen', '18': 'eighteen', '19': 'nineteen'}
+
+        if l == 1:
+            if num == '0':
+                print("Zero")
+            else:
+                print(word1[num].capitalize())
+
+        elif l == 2:
+            if num[-1] == '0':
+                print(word10[num[0]].capitalize())
+            elif num[-1] != '0' and int(num) > 19:
+                print(word10[num[0]].capitalize() + ' ' + word1[num[1]])
+            elif 10 < int(num) < 20:
+                print(word11[num].capitalize())
+
+        elif l == 3:
+            if num[-1] == '0' and num[1] != '0':
+                print(word1[num[0]].capitalize() + ' hundred ' + word10[num[1]])
+            elif num[-1] != '0' and int(num[1:]) > 19:
+                print(word1[num[0]].capitalize() + ' hundred ' + word10[num[1]] + ' ' + word1[num[2]])
+            elif 10 < int(num) < 20:
+                print(word1[num[0]].capitalize() + ' hundred ' + word11[num[1:]])
+            elif num[-1] == '0' and num[1] == '0':
+                print(word1[num[0]].capitalize() + ' hundred ')
+            elif num[1] == '0' and num[-1] != '0':
+                print(word1[num[0]].capitalize() + ' hundred ' + word1[num[2]])
+    </textarea>
+    <br><br><br><br>
+     <h1>CSV FILE</h1>
+     <textarea id="w3review" name="w3review" rows="4" cols="50">
+        import csv
+        file1 = open('x.csv', 'w', newline='')
+        file2 = open('y.csv', 'w', newline='')
+        cus1 = csv.writer(file1)
+        cus2 = csv.writer(file2)
+        one = [
+            ['Rn', 'Name', 'Class'],
+            ['1', 'A', '11-M1'],
+            ['2', 'C', '12-B1'],
+            ['3', 'B', '11-C2'],
+            ['4', 'D', '12-B2']
+        ]
+        two = [
+            ['Rn', 'Name', 'Marks'],
+            ['1', 'A', '13'],
+            ['2', 'C', '10'],
+            ['3', 'B', '18'],
+            ['4', 'D', '9']
+        ]
+        cus1.writerows(one)
+        cus2.writerows(two)
+
+        file1.close()
+        file2.close()
+
+
+        file1 = open('x.csv', 'r', newline='')
+        file2 = open('y.csv', 'r', newline='')
+        file3 = open('z.csv', 'w', newline='')
+        cus1 = csv.reader(file1)
+        cus2 = csv.reader(file2)
+        cus3 = csv.writer(file3)
+        lis = []
+        inc = 0
+        for x in cus1:
+            lis.append(x)
+        for x in cus2:
+            lis[inc].append(x[-1])
+            inc += 1
+        cus3.writerows(lis)
+        file1.close()
+        file2.close()
+        file3.close()
+
+    </textarea>
   </marquee>
  </body>
  </html>
