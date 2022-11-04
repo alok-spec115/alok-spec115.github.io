@@ -120,6 +120,7 @@ else:
     
     
      <h1>CSV FILE</h1>
+     <h2>CODE-1: BASED ON USER MANNUAL INPUT</h2>
      <textarea rows="50" cols="60">
 import csv
 file1 = open('x.csv', 'w', newline='')
@@ -127,13 +128,11 @@ file2 = open('y.csv', 'w', newline='')
 cus1 = csv.writer(file1)
 cus2 = csv.writer(file2)
 times = int(input("How many data you want to add: "))
-  
-one = [
-    ['Rn', 'Name', 'Class'],
-]
-two = [
-    ['Rn', 'Name', 'Marks'],
-]
+one = []
+two = []
+
+cus1.writerow(['Rn', 'Name', 'Cl-sec'])
+cus2.writerow(['Rn', 'Name', 'Marks'])
 
 for x in range(times):
     Rn = input("Enter Roll number: ")
@@ -146,7 +145,6 @@ for x in range(times):
     one.append(add_one)
     two.append(add_two)
 
-    
 cus1.writerows(one)
 cus2.writerows(two)
 
@@ -161,12 +159,25 @@ cus1 = csv.reader(file1)
 cus2 = csv.reader(file2)
 cus3 = csv.writer(file3)
 lis = []
+lis2 = []
 inc = 0
 for x in cus1:
-    lis.append(x)
+    lis2.append(x)
+
+lis2.pop(0)
+lis.extend(lis2)
+
+lis2 = []
 for x in cus2:
+    lis2.append(x)
+lis2.pop(0)
+for x in lis2:
     lis[inc].append(x[-1])
     inc += 1
+
+lis.sort()
+
+cus3.writerow(['Rn', 'Name', 'Cl-sec', 'Marks'])
 cus3.writerows(lis)
 file1.close()
 file2.close()
@@ -174,6 +185,70 @@ file3.close()
 
 
     </textarea>
+    <h2>CODE-2: PREDEFINED DATA</h2>
+    <textarea rows="50" cols="60">
+import csv
+file1 = open('x.csv', 'w', newline='')
+file2 = open('y.csv', 'w', newline='')
+cus1 = csv.writer(file1)
+cus2 = csv.writer(file2)
+one = [
+    ['1', 'A', '11-M1'],
+    ['3', 'C', '12-B1'],
+    ['2', 'B', '11-C2'],
+    ['4', 'D', '12-B2']
+]
+two = [
+    ['1', 'A', '13'],
+    ['3', 'C', '10'],
+    ['2', 'B', '18'],
+    ['4', 'D', '9']
+]
+
+
+cus1.writerow(['Rn', 'Name', 'Cl-sec'])
+cus2.writerow(['Rn', 'Name', 'Marks'])  
+cus1.writerows(one)
+cus2.writerows(two)
+
+file1.close()
+file2.close()
+
+
+file1 = open('x.csv', 'r', newline='')
+file2 = open('y.csv', 'r', newline='')
+file3 = open('z.csv', 'w', newline='')
+cus1 = csv.reader(file1)
+cus2 = csv.reader(file2)
+cus3 = csv.writer(file3)
+lis = []
+lis2 = []
+inc = 0
+for x in cus1:
+    lis2.append(x)
+
+lis2.pop(0)
+lis.extend(lis2)
+
+lis2 = []
+for x in cus2:
+    lis2.append(x)
+lis2.pop(0)
+for x in lis2:
+    lis[inc].append(x[-1])
+    inc += 1
+
+lis.sort()
+
+cus3.writerow(['Rn', 'Name', 'Cl-sec', 'Marks'])
+cus3.writerows(lis)
+file1.close()
+file2.close()
+file3.close()
+
+        
+     </textarea>
+    
 
  </body>
  </html>
