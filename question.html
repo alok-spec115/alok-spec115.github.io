@@ -8,9 +8,10 @@
 <body>
   
  <H1>NUMBER TO WORD</h1>
-     <textarea id="w3review" name="w3review" rows="4" cols="50">
+    <h2> CODE ONE TO CHECK ALL IF ALL POSSIBLE INPUTS ARE VALID USING for loop</h2>
+     <textarea rows="50" cols="60">
 for x in range(1000):
-    num = str(x)# input("Enter a number: ")
+    num = str(x)
     l = len(num)
 
     word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
@@ -20,13 +21,59 @@ for x in range(1000):
     word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '15': 'Fifteen',
               '16': 'Fixteen', '17': 'Feventeen', '18': 'Fighteen', '19': 'Fineteen'}
     print(num, end=': ')
+
+    if (num[0] == '0' and l == 2) or l == 1:
+        if l == 1:
+            if num == '0':
+                print("Zero")
+            else:
+                print(word1[num])
+
+    else:
+        if l == 2:
+            if num[-1] == '0':
+                print(word10[num[0]])
+            elif num[-1] != '0' and int(num) > 19:
+                print(word10[num[0]] + ' ' + word1[num[1]])
+            elif 10 < int(num) < 20:
+                print(word11[num])
+
+        elif l == 3:
+            if num[-1] == '0' and num[1] != '0':
+                print(word1[num[0]] + ' Hundred ' + word10[num[1]])
+            elif num[-1] != '0' and int(num[1:]) > 19:
+                print(word1[num[0]] + ' Hundred ' + word10[num[1]] + ' ' + word1[num[2]])
+            elif 10 < int(num[1:]) < 20:
+                print(word1[num[0]] + ' Hundred ' + word11[num[1:]])
+            elif num[-1] == '0' and num[1] == '0':
+                print(word1[num[0]] + ' Hundred ')
+            elif num[1] == '0' and num[-1] != '0':
+                print(word1[num[0]] + ' Hundred ' + word1[num[2]])
+
+    </textarea>
+    <br><br><br><br>
+  
+    <h2>USING MANNUL INPUT</h2>
+    <textarea rows="50" cols="60">
+num = input("Enter the number: ")
+l = len(num)
+
+word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
+           '6': 'Sixty', '7': 'Seventy', '8': 'Eighty', '9': 'Ninety'}
+word1 = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five',
+         '6': 'Six', '7': 'Seven', '8': 'Eight', '9': 'Nine'}
+word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '15': 'Fifteen',
+          '16': 'Fixteen', '17': 'Feventeen', '18': 'Fighteen', '19': 'Fineteen'}
+
+if (num[0] == '0' and l == 2) or l == 1:
     if l == 1:
         if num == '0':
             print("Zero")
         else:
             print(word1[num].capitalize())
 
-    elif l == 2:
+else:
+    if l == 2:
         if num[-1] == '0':
             print(word10[num[0]])
         elif num[-1] != '0' and int(num) > 19:
@@ -49,10 +96,13 @@ for x in range(1000):
 
 
 
-    </textarea>
-    <br><br><br><br>
+        
+     </textarea>
+    
+    
+    
      <h1>CSV FILE</h1>
-     <textarea id="w3review" name="w3review" rows="4" cols="50">
+     <textarea rows="50" cols="60">
 import csv
 file1 = open('x.csv', 'w', newline='')
 file2 = open('y.csv', 'w', newline='')
