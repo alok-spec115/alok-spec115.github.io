@@ -13,43 +13,41 @@
      <textarea rows="50" cols="60">
 for x in range(1000):
     num = str(x)
+    num = num.lstrip('0')
     l = len(num)
 
     word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
-              '6': 'Sixty', '7': 'Seventy', '8': 'Eighty', '9': 'Ninety'}
+               '6': 'Sixty', '7': 'Seventy', '8': 'Eighty', '9': 'Ninety'}
     word1 = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five',
              '6': 'Six', '7': 'Seven', '8': 'Eight', '9': 'Nine'}
     word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '15': 'Fifteen',
               '16': 'Sixteen', '17': 'Seventeen', '18': 'Eighteen', '19': 'Nineteen'}
-    print(num, end=': ')
-    
-    if (num[0] == '0' and l == 2) or l == 1:
-        num = num[-1]
-        l = 1
-        if l == 1:
-            if num == '0':
-                print("Zero")
-            else:
-                print(word1[num])
-    else:
-        if l == 2:
-            if num[-1] == '0':
-                print(word10[num[0]])
-            elif num[-1] != '0' and int(num) > 19:
-                print(word10[num[0]] + ' ' + word1[num[1]])
-            elif 10 < int(num) < 20:
-                print(word11[num])
 
-        elif l == 3:
-            if num[-1] == '0' and num[1] != '0':
+    if l == 1:
+        if num == '0':
+            print("Zero")
+        else:
+            print(word1[num])
+
+
+    elif l == 2:
+        if num[-1] == '0':
+            print(word10[num[0]])
+        elif num[-1] != '0' and int(num) > 19:
+            print(word10[num[0]] + ' ' + word1[num[1]])
+        elif 10 < int(num) < 20:
+            print(word11[num])
+
+    elif l == 3:
+        if num[-1] == '0' and num[1] != '0':
                 print(word1[num[0]] + ' Hundred ' + word10[num[1]])
-            elif num[-1] != '0' and int(num[1:]) > 19:
+        elif num[-1] != '0' and int(num[1:]) > 19:
                 print(word1[num[0]] + ' Hundred ' + word10[num[1]] + ' ' + word1[num[2]])
-            elif 10 < int(num[1:]) < 20:
+        elif 10 < int(num[1:]) < 20:
                 print(word1[num[0]] + ' Hundred ' + word11[num[1:]])
-            elif num[-1] == '0' and num[1] == '0':
+        elif num[-1] == '0' and num[1] == '0':
                 print(word1[num[0]] + ' Hundred ')
-            elif num[1] == '0' and num[-1] != '0':
+        elif num[1] == '0' and num[-1] != '0':
                 print(word1[num[0]] + ' Hundred ' + word1[num[2]])
 
     </textarea>
@@ -60,7 +58,9 @@ for x in range(1000):
     <h2>CODE 2: USING MANNUAL INPUT</h2>
     <textarea rows="50" cols="60">
 
+
 num = input("Enter the number: ")
+num = num.lstrip('0')
 l = len(num)
 
 word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
@@ -98,8 +98,7 @@ else:
         elif num[-1] == '0' and num[1] == '0':
             print(word1[num[0]] + ' Hundred ')
         elif num[1] == '0' and num[-1] != '0':
-            print(word1[num[0]] + ' Hundred ' + word1[num[2]])
-        
+            print(word1[num[0]] + ' Hundred ' + word1[num[2]])     
      </textarea>
     
     
@@ -111,20 +110,27 @@ file1 = open('x.csv', 'w', newline='')
 file2 = open('y.csv', 'w', newline='')
 cus1 = csv.writer(file1)
 cus2 = csv.writer(file2)
+times = int(input("How many data you want to add: "))
+  
 one = [
     ['Rn', 'Name', 'Class'],
-    ['1', 'A', '11-M1'],
-    ['2', 'C', '12-B1'],
-    ['3', 'B', '11-C2'],
-    ['4', 'D', '12-B2']
 ]
 two = [
     ['Rn', 'Name', 'Marks'],
-    ['1', 'A', '13'],
-    ['2', 'C', '10'],
-    ['3', 'B', '18'],
-    ['4', 'D', '9']
 ]
+
+for x in range(times):
+    Rn = input("Enter Roll number: ")
+    Name = input("Enter Name: ")
+    Class = input("Enter Class: ")
+    Marks = input("Enter Marks: ")
+    print()
+    add_one = [Rn, Name, Class]
+    add_two = [Rn, Name, Marks]
+    one.append(add_one)
+    two.append(add_two)
+
+    
 cus1.writerows(one)
 cus2.writerows(two)
 
@@ -149,6 +155,7 @@ cus3.writerows(lis)
 file1.close()
 file2.close()
 file3.close()
+
 
     </textarea>
 
