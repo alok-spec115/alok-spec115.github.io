@@ -13,9 +13,6 @@
      <textarea rows="50" cols="60">
 for x in range(1000):
     num = str(x)
-    num = num.lstrip('0')
-    l = len(num)
-
     word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
                '6': 'Sixty', '7': 'Seventy', '8': 'Eighty', '9': 'Ninety'}
     word1 = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five',
@@ -23,32 +20,46 @@ for x in range(1000):
     word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '15': 'Fifteen',
               '16': 'Sixteen', '17': 'Seventeen', '18': 'Eighteen', '19': 'Nineteen'}
 
-    if l == 1:
-        if num == '0':
+
+    if num == '' :
+        print('No input')
+
+    else:
+        num = num.lstrip('0')
+        l = len(num)
+
+        if l == 0:
             print("Zero")
-        else:
-            print(word1[num])
 
+        elif l == 1:
+                print(word1[num])
 
-    elif l == 2:
-        if num[-1] == '0':
-            print(word10[num[0]])
-        elif num[-1] != '0' and int(num) > 19:
-            print(word10[num[0]] + ' ' + word1[num[1]])
-        elif 10 < int(num) < 20:
-            print(word11[num])
+        elif l == 2:
+            if num[-1] == '0':
+                print(word10[num[0]])
+            elif num[-1] != '0' and int(num) > 19:
+                print(word10[num[0]] + ' ' + word1[num[1]])
+            elif 10 < int(num) < 20:
+                print(word11[num])
 
-    elif l == 3:
-        if num[-1] == '0' and num[1] != '0':
+        elif l == 3:
+            if num[-1] == '0' and num[1] != '0':
                 print(word1[num[0]] + ' Hundred ' + word10[num[1]])
-        elif num[-1] != '0' and int(num[1:]) > 19:
+            elif num[-1] != '0' and int(num[1:]) > 19:
                 print(word1[num[0]] + ' Hundred ' + word10[num[1]] + ' ' + word1[num[2]])
-        elif 10 < int(num[1:]) < 20:
+            elif 10 < int(num[1:]) < 20:
                 print(word1[num[0]] + ' Hundred ' + word11[num[1:]])
-        elif num[-1] == '0' and num[1] == '0':
+            elif num[-1] == '0' and num[1] == '0':
                 print(word1[num[0]] + ' Hundred ')
-        elif num[1] == '0' and num[-1] != '0':
-                print(word1[num[0]] + ' Hundred ' + word1[num[2]])
+            elif num[1] == '0' and num[-1] != '0':
+                print(word1[num[0]] + ' Hundred ' + word1[num[2]])     
+        else:
+            print("Something is wrong with input") 
+
+
+         
+
+        
 
     </textarea>
     <br><br><br><br>
@@ -59,10 +70,8 @@ for x in range(1000):
     <textarea rows="50" cols="60">
 
 
-num = input("Enter the number: ")
-num = num.lstrip('0')
-l = len(num)
 
+num = input("Enter the number: ")
 word10 = {'1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty',
            '6': 'Sixty', '7': 'Seventy', '8': 'Eighty', '9': 'Ninety'}
 word1 = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five',
@@ -70,17 +79,21 @@ word1 = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five',
 word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '15': 'Fifteen',
           '16': 'Sixteen', '17': 'Seventeen', '18': 'Eighteen', '19': 'Nineteen'}
 
-if (num[0] == '0' and l == 2) or l == 1:
-    num = num[-1]
-    l = 1
-    if l == 1:
-        if num == '0':
-            print("Zero")
-        else:
-            print(word1[num])
+
+if num == '' :
+    print('No input')
 
 else:
-    if l == 2:
+    num = num.lstrip('0')
+    l = len(num)
+
+    if l == 0:
+        print("Zero")
+
+    elif l == 1:
+            print(word1[num])
+
+    elif l == 2:
         if num[-1] == '0':
             print(word10[num[0]])
         elif num[-1] != '0' and int(num) > 19:
@@ -99,6 +112,9 @@ else:
             print(word1[num[0]] + ' Hundred ')
         elif num[1] == '0' and num[-1] != '0':
             print(word1[num[0]] + ' Hundred ' + word1[num[2]])     
+    else:
+        print("Something is wrong with input") 
+
      </textarea>
     
     
