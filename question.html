@@ -21,14 +21,15 @@ for x in range(1000):
     word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '15': 'Fifteen',
               '16': 'Fixteen', '17': 'Feventeen', '18': 'Fighteen', '19': 'Fineteen'}
     print(num, end=': ')
-
+    
     if (num[0] == '0' and l == 2) or l == 1:
+        num = num[-1]
+        l = 1
         if l == 1:
             if num == '0':
                 print("Zero")
             else:
                 print(word1[num])
-
     else:
         if l == 2:
             if num[-1] == '0':
@@ -52,9 +53,12 @@ for x in range(1000):
 
     </textarea>
     <br><br><br><br>
+    
+    
   
     <h2>USING MANNUL INPUT</h2>
     <textarea rows="50" cols="60">
+
 num = input("Enter the number: ")
 l = len(num)
 
@@ -66,11 +70,13 @@ word11 = {'11': 'Eleven', '12': 'Twelve', '13': 'Thirteen', '14': 'Fourteen', '1
           '16': 'Fixteen', '17': 'Feventeen', '18': 'Fighteen', '19': 'Fineteen'}
 
 if (num[0] == '0' and l == 2) or l == 1:
+    num = num[-1]
+    l = 1
     if l == 1:
         if num == '0':
             print("Zero")
         else:
-            print(word1[num].capitalize())
+            print(word1[num])
 
 else:
     if l == 2:
@@ -92,10 +98,6 @@ else:
             print(word1[num[0]] + ' Hundred ')
         elif num[1] == '0' and num[-1] != '0':
             print(word1[num[0]] + ' Hundred ' + word1[num[2]])
-
-
-
-
         
      </textarea>
     
