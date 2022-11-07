@@ -249,6 +249,57 @@ file3.close()
         
      </textarea>
     
+ <h2>CODE-3: Final csv code</h2>
+    <textarea rows='50' cols='60'>
+import csv
+# Make x.csv
+one = [
+    ['Rn', 'Name', 'Cl-sec'],
+    ['1', 'A', '11-M1'],
+    ['3', 'C', '12-B1'],
+    ['2', 'B', '11-C2'],
+    ['4', 'D', '12-B2']
+]
+
+with open('x.csv', 'w', newline='') as file1:
+       csv.writer(file1).writerows(one)
+
+file1 = open('x.csv', 'r', newline='')
+file2 = open('y.csv', 'w', newline='')
+file3 = open('z.csv', 'w', newline='')
+
+cus1 = csv.reader(file1)
+cus2 = csv.writer(file2)
+cus3 = csv.writer(file3)
+
+rn = input("Enter roll: ")
+name = input("Enter name: ")
+marks = input("Enter marks: ")
+
+cus2.writerow(['Rn', 'Name', 'Marks'])
+cus3.writerow(['Rn', 'Name', 'Cl-sec', 'Marks'])
+
+lis3 = []
+
+for x in cus1:
+    if rn == x[0] and name == x[1]:
+            x.append(marks)
+            lis3.append(x)
+lis2 = lis3.copy()
+lis3.sort()
+cus3.writerows(lis3)
+
+for x in lis2:
+    x.pop(2)
+
+cus2.writerows(lis2)
+
+file1.close()
+file2.close()
+file3.close()
+
+     </textarea>
+    
 
  </body>
  </html>
