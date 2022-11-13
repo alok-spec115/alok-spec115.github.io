@@ -1,0 +1,14 @@
+create table tech_course (
+	cid char(10),
+    cname char(30),
+    fees int,
+    startdate date,
+    tid int
+);
+
+insert into tech_course values('c201', 'a & v', 12000, '2022-07-02', 101);
+insert into tech_course values('c202', 'cadd', 15000, '2021-11-15', null);
+insert into tech_course values('c203', 'dca', 10000, '2020-10-01', 102);
+insert into tech_course values('c204', 'ddtp', 9000, '2021-09-15', 104);
+insert into tech_course values('c205', 'm a d', 18000, '2022-11-01', 101);
+insert into tech_course values('c206', 'd m', 16000, '2022-07-20', 103);

@@ -1,0 +1,14 @@
+create table flight (
+	fno char(5),
+    start varchar(15),
+    end varchar(15),
+    f_date date,
+    fare int
+);
+
+
+insert into flight value('f101', 'mumbai', 'chennai', '2021-12-25', 4500);
+insert into flight value('f102', 'mumbai', 'bengaluru', '2021-11-20', 4000);
+insert into flight value('f103', 'delhi', 'chennai', '2021-12-10', 5500);
+insert into flight value('f104', 'kolkata', 'mumbai', '2021-12-20', 4500);
+insert into flight value('f105', 'delhi', 'bengaluru', '2021-01-15', 5000);

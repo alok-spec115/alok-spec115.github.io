@@ -1,0 +1,18 @@
+create table school (
+	code int,
+    teacher varchar(10),
+    subject varchar(30),
+    doj varchar(20),
+    periods int,
+    experience int
+);
+
+insert into school values(1001, 'rs', 'eng', '12/3/2002', 24, 10);
+insert into school values(1009, 'pr', 'phy', '03/09/1998', 26, 12);
+insert into school values(1203, 'la', 'eng', '09/04/2000', 27, 5);
+insert into school values(1045, 'yr', 'maths', '24/8/2000', 24, 15);
+insert into school values(1123, 'ga', 'phy', '16/7/1999', 28, 3);
+insert into school values(1167, 'hb', 'chem', '19/10/1999', 27, 5);
+insert into school values(1215, 'um', 'phy', '11/05/1998', 22, 16);
+
+

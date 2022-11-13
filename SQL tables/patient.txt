@@ -1,0 +1,11 @@
+create table patient (
+	pno char(10),
+    pname char(10),
+    admdate date,
+    dno char(10)
+);
+
+insert into patient values('p1', 'noor', '2021-12-25', 'd1');
+insert into patient values('p2', 'annie', '2021-11-20', 'd2');
+insert into patient values('p3', 'prakash', '2020-12-10', null);
+insert into patient values('p4', 'harmeet', '2019-12-20', 'd1');

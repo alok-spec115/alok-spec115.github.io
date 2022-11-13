@@ -1,0 +1,13 @@
+create table passenger (
+	pno int,
+    name varchar(10),
+    gender varchar(20),
+    fno char(5)
+);
+
+
+
+insert into passenger value(1001, 'suresh', 'male', 'f101');
+insert into passenger value(1002, 'anita', 'female', 'f104');
+insert into passenger value(1003, 'harjas', 'male', 'f102');
+insert into passenger value(1004, 'nita', 'female', 'f103');

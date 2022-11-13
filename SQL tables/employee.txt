@@ -1,0 +1,32 @@
+
+create table employee (
+	empid int,
+    name char(10),
+    dob char(20),
+    deptid char(5),
+    design char(20),
+    salary int
+);
+
+insert into employee values(120, 'alisha', '23-jan-1978', 'd001', 'manager', 7500);
+insert into employee values(123, 'nitin', '10-oct-1977', 'd002', 'ao', 59000);
+insert into employee values(129, 'navjot', '12-jul-1971', 'd003', 'superviser', 40000);
+insert into employee values(130, 'jimmy', '30-dec-1930', 'd004', 'sales rep', null);
+insert into employee values(131, 'faiz', '06-apr-1984', 'd001', 'dep manager', 65000);
+
+
+create table department (
+	deptid char(5),
+    deptname char(10),
+    floorno int
+);
+
+insert into department values('d001', 'personal', 4);
+insert into department values('d002', 'admin', 10);
+insert into department values('d003', 'production', 1);
+insert into department values('d004', 'sales', 3);
+
+select avg(employee.salary), deptname from employee, department group by department.deptname;
+
+select employee.name, deptname from employee, department
+where employee.salary > 5000;

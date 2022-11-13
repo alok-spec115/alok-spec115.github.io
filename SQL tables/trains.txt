@@ -1,0 +1,18 @@
+create table trains (
+	tno int,
+    tname varchar(10),
+    start varchar(30),
+    end varchar(20)
+);
+
+insert into trains values(11096, 'ah ex', 'pune jn', 'amd jn');
+insert into trains values(12015, 'aj sh', 'nd', 'aj jn');
+insert into trains values(1615, 'pu hb sp', 'pune jn', 'hab');
+insert into trains values(13005, 'am ma', 'ho jn', 'am jn');
+insert into trains values(12002, 'bh sh', 'nd', 'hab');
+insert into trains values(12417, 'pr ra ex', 'all jn', 'nd');
+insert into trains values(14673, 'se ex', 'ja', 'am jn');
+insert into trains values(12314, 'se ra', 'nd', 'se');
+insert into trains values(12498, 'sh pu', 'am jn', 'nd');
+insert into trains values(12451, 'sh sh ex', 'ka ce', 'nd');
+insert into trains values(12030, 'sw sh', 'am jn', 'nd');

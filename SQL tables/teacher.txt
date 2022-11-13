@@ -1,0 +1,19 @@
+create table teacher (
+	t_id int,
+    name char(20),
+    age int,
+    department char(20),
+    date_of_join date,
+    salary int,
+    gender char(2)
+);
+
+insert into teacher values(1, 'arunan', 34, 'cs', '2019-01-10', 12000, 'm');
+insert into teacher values(2, 'saman', 31, 'his', '2017-03-24', 20000, 'f');
+insert into teacher values(3, 'randeep', 32, 'maths', '2020-12-12', 30000, 'm');
+insert into teacher values(4, 'samira', 35, 'his', '2018-07-01', 40000, 'f');
+insert into teacher values(5, 'raman', 42, 'maths', '2021-09-05', 25000, 'm');
+insert into teacher values(6, 'shayam', 50, 'his', '2019-06-27', 3000, 'm');
+insert into teacher values(7, 'shiv', 44, 'cs', '2019-02-25', 21000, 'm');
+insert into teacher values(8, 'shalakha', 33, 'maths', '2018-07-31', 20000, 'f');
+

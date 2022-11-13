@@ -1,0 +1,14 @@
+create table vaccination_data (
+	vid int,
+    name char(10),
+    age int,
+    dose1 date,
+    dose2 date,
+    city char(10)
+);
+
+insert into vaccination_data values(101, 'jenny', 27, '2021-12-25', '2022-01-31', 'delhi');
+insert into vaccination_data values(102, 'harjot', 55, '2021-07-14', '2021-10-14', 'mumbai');
+insert into vaccination_data values(103, 'jsrikanth', 43, '2021-04-18', '2021-07-20', 'delhi');
+insert into vaccination_data values(104, 'gazala', 75, '2021-07-31', null, 'kolkata');
+insert into vaccination_data values(105, 'shiksha', 32, '2022-01-01', null, 'mumbai');

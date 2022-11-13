@@ -1,0 +1,9 @@
+create table placement (
+	p_id int,
+    department char(10),
+    place char(20)
+);
+
+insert into placement values(1, 'his', 'amd');
+insert into placement values(2, 'maths', 'jai');
+insert into placement values(3, 'cs', 'nag');

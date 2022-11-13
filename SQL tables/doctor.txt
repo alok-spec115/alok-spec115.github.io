@@ -1,0 +1,11 @@
+create table doctor (
+	dno char(10),
+    dname char(10),
+    fees int
+);
+
+insert into doctor values('d1', 'amitabh', 1500);
+insert into doctor values('d2', 'aniket', 1000);
+insert into doctor values('d3', 'nikhil', 1500);
+insert into doctor values('d4', 'anjana', 1500);
+

@@ -1,0 +1,28 @@
+create table admin (
+	code int,
+    gender varchar(6),
+    designation varchar(20)
+);
+
+insert into admin values(1001, 'male', 'vice principal');
+insert into admin values(1009, 'female', 'cordinator');
+insert into admin values(1203, 'female', 'cordinator');
+insert into admin values(1045, 'male', 'hod');
+insert into admin values(1123, 'male', 'senior teacher');
+insert into admin values(1167, 'male', 'senior teacher');
+insert into admin values(1215, 'male', 'hod');
+
+select * from admin;
+
+select designation, count(*) from admin group by designation having count(*) < 2;
+
+select max(code) from admin;
+
+select designation from admin 
+where code > 1050;
+
+describe admin;
+
+select count(*), gender from admin group by gender;
+
+select count(*), designation from admin group by designation;
