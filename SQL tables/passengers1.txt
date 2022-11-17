@@ -1,0 +1,18 @@
+create table passengers1 (
+	pnr char(5),
+    tno int,
+    pname varchar(20),
+    gender char(7),
+    age int,
+    traveldate date
+);
+
+insert into passengers1 values('p001', 13005, 'rn agrwal', 'male', 45, '2018-12-25');
+insert into passengers1 values('p002', 12015, 'p tiwari', 'male', 28, '2018-11-10');
+insert into passengers1 values('p003', 12015, 's tiwari', 'female', 22, '2018-11-10');
+insert into passengers1 values('p004', 12030, 'sk saxena', 'male', 42, '2018-10-12');
+insert into passengers1 values('p005', 12030, 's saxena', 'female', 35, '2018-10-12');
+insert into passengers1 values('p006', 12030, 'p saxena', 'female', 12, '2018-10-12');
+insert into passengers1 values('p007', 13005, 'ns singh', 'male', 52, '2018-05-09');
+insert into passengers1 values('p008', 12030, 'jk sinh', 'male', 65, '2018-05-09');
+insert into passengers1 values('p009', 12030, 'r sharma', 'female', 58, '2018-05-09');
