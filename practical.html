@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question</title>
+</head>
+<body>
+    <h1>COPY THE CODE FROM THE FIELD AND RUN IN PYTHON SHELL</h1>
+  
+     <textarea rows="50" cols="60">
+       """
+Replace the file names to as given in questions
+"""
+
+
+# file1 27-or
+def lu_count():
+
+    file = open('abc.txt', 'r')
+    l = u = 0
+    a = file.read()
+    for x in a:
+        if x.islower():
+            l += 1
+        elif x.isupper():
+            u += 1
+    print("Number of uppercase characters: ", u)
+    print("Number of lowercase characters: ", l)
+
+
+# file1 30-or-(i)
+stack = []
+def PUSH(Arr):
+    for x in Arr:
+        if x % 5 == 0:
+            stack.append(x)
+    else:
+        if len(stack) == 0:
+            print("Empty Stack!")
+        else:
+            top = len(stack)-1  # -1 index
+            print(stack[top], '<-top')
+            for x in range(top-1, -1, -1):
+                print(stack[x])
+
+
+# file1 30-or-(ii)
+def POP(Arr):  # Arr = stack which is defined above
+
+    if len(Arr) == 0:
+        print("Empty Stack!")
+    else:
+        return Arr.pop()
+
+# file2 29
+def Reverse(x):
+    x.reverse()
+    for c in range(len(x)):
+        x[c] = x[c]*2
+    print(x)
+
+
+# file2 32-i-(b)
+"""
+
+import mysql.connector
+
+db = mysql.connector.connect(host='localhost', user='Admin', password='Admin@123', database='MySQL')
+cus = db.cursor()
+
+query = "
+update student 
+set grade='A'
+where points=8;
+" use triple comma here
+
+cus.execute(query)
+db.commit()
+db.close()
+
+"""
+
+
+# file2 32-or-(b)
+"""
+import mysql.connector
+
+db = mysql.connector.connect(host='localhost', user='root', password='alok@1234', database='examination')
+cus = db.cursor()
+
+query = "
+select M_Id, M_Name, M_Supplier from mobilestock;
+" use triple quote
+
+cus.execute(query)
+a = cus.fetchall()  # all record are now fetched
+# following program will display each record
+for x in a:
+    print(x)
+
+db.commit()
+db.close()"""
+
+# file3-27-i
+"""
+
+
+import pickle
+
+file = open('data.dat', 'rb')
+ano = int(input("Enter the Ano: "))
+
+fnd = 0
+try:
+    while True:
+        a = pickle.load(file)
+        if ano == a[0]:
+            fnd += 1
+except EOFError:
+    if fnd == 0:
+        print('No record of', ano, 'found')
+    else:
+        print(ano, 'found in', fnd, 'places')
+    file.close()
+"""
+
+
+# file3-27-ii(or part)
+def countand():
+    file = open('abc.txt', 'r')
+    a = file.read().split()
+    and_ = a.count('and')
+    And_ = a.count("And")
+
+    print("Count of_and_in file is/are:", and_ + And_)
+    file.close()
+
+
+# file3-29 (below 3 functions)
+def factors(num):
+    lis = []
+    for x in range(1, num + 1):
+        if num % x == 0:
+            lis.append(x)
+    print("Factors of", num, "are: ", end='')
+    for x in lis:
+        print(x, end='  ')
+def factorial(num):
+    r = 1
+    for x in range(num, 1, -1):  # loop will run num-1 times
+        r = r * x
+    print('Factorial of', num, 'is:', r)
+def main():
+    n = int(input("Number: "))
+    factorial(n)
+    factors(n)
+
+
+# file3-30-i
+# stack = []
+def push(stk, item):
+    item = str(item)  # if user input a number isalpha() will give error
+    if item.isalpha() or item.isspace() or item == '.':
+        stk.append(item)
+    else:
+        print('Incorrect name format!')
+
+
+# file4-27-or_part
+def countme():
+    file = open('abc.txt', 'r')
+    a = file.read().split()
+    me = a.count('me')
+    Me = a.count("Me")
+
+    print("Count of Me/me in file:", me + Me)
+    file.close()
+
+# file4-29
+lis = [1, 2, 3, 4, 5]
+def function(lis, num):
+    a = input("Insert (i) or delete (d) " + str(num) + ': ')
+    if a == 'i':
+        lis.append(num)
+    elif a == 'd':
+        lis.remove(num)
+    lis.sort()
+    print(lis)
+
+
+
+
+    </textarea>
+   
+    
+
+ </body>
+ </html>
