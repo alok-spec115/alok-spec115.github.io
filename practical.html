@@ -14,6 +14,11 @@ Replace the file names to as given in questions
 """
 
 
+"""
+Replace the file names to as given in questions
+"""
+
+
 # file1 27-or
 def lu_count():
 
@@ -27,7 +32,7 @@ def lu_count():
             u += 1
     print("Number of uppercase characters: ", u)
     print("Number of lowercase characters: ", l)
-
+    file.close()
 
 # file1 30-or-(i)
 stack = []
@@ -104,25 +109,24 @@ db.close()"""
 
 # file3-27-i
 """
-
-
 import pickle
 
 file = open('data.dat', 'rb')
-ano = int(input("Enter the Ano: "))
+ano = input("Enter the Ano: ")
 
 fnd = 0
 try:
     while True:
         a = pickle.load(file)
-        if ano == a[0]:
+        if ano == str(a[0]):
+            print("Record:\n", a[0], a[1], a[2])
             fnd += 1
+
 except EOFError:
     if fnd == 0:
         print('No record of', ano, 'found')
-    else:
-        print(ano, 'found in', fnd, 'places')
     file.close()
+
 """
 
 
@@ -161,10 +165,15 @@ def main():
 # stack = []
 def push(stk, item):
     item = str(item)  # if user input a number isalpha() will give error
-    if item.isalpha() or item.isspace() or item == '.':
-        stk.append(item)
+    a = 'abcdefghijklmnopqrstuvwxyz. '
+    for x in item:
+        if x not in a:
+            break
     else:
-        print('Incorrect name format!')
+        stk.append(item)
+    if item not in stk:
+        print("Incorrect Format!")
+
 
 
 # file4-27-or_part
@@ -188,6 +197,23 @@ def function(lis, num):
     lis.sort()
     print(lis)
 
+
+# file4-33-or-ii
+"""
+file = open('abc.txt', 'a')
+a = input("Text to add: ")
+file.write('\n')
+file.write(a)
+file.close()
+
+file = open('abc.txt', 'r')
+a = file.readlines()
+
+for x in range(len(a)):
+    print(str(x+1) + '  ' + a[x], end='')
+file.close()
+
+"""
 
 
 
