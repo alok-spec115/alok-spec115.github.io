@@ -11,11 +11,16 @@
 .one{grid-area: one}
 .two{grid-area: two}
 .three{grid-area: three}
+.four{grid-area: four}
+.five{grid-area: five}
+.six{grid-area: six}
+
 
 .main{
   display: grid;
   grid-template-areas: 
-  '. one two three';
+  '. one two three'
+  '. four five six';
 }
 
 
@@ -58,7 +63,10 @@
     grid-template-areas: 
     '. . one .'
     '. . two .'
-    '. . three .';
+    '. . three .'
+    '. . four .'
+    '. . five .'
+    '. . six .';
   }
 }
 
